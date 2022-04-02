@@ -6,21 +6,26 @@ class ReverseUserString extends React.Component {
     super(props)
     this.state = {
       inputString: '',
-      reveresedString: '',
+      reveresedString: ''
     }
+    // change handler needs to be bound in constructor
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e) {
     this.setState({ 
       inputString: e.target.value,
+      // one may not use this.state.inputString to derive the below as the state 
+      // retains an erroneous older one char
       reveresedString: e.target.value.split('').reverse().join('') 
     });
   }
 
   render () {
     return (
-      <div  style={{textAlign:"center"}}>
+      // center div horizontally in view port
+      // shorthand wrapper <> may not be used when style or other attrs present
+      <div style={{textAlign:"center"}}>
         <input  
           style={{textAlign:"center"}}
           placeholder="enter a string"
