@@ -17,6 +17,6 @@ ReactDOM.render(
   // <Timer />,
   // <SomeTimerComponent/>,
   // <TodoApp/>,
-  <ReverseUserString/>,
+  <ReverseUserString textAlign='center'/>,
   document.getElementById('root')
 );

@@ -23,9 +23,9 @@ class ReverseUserString extends React.Component {
 
   render () {
     return (
-      // center div horizontally in view port
+      // center div horizontally in view port using supplied props
       // shorthand wrapper <> may not be used when style or other attrs present
-      <div style={{textAlign:"center"}}>
+      <div style={{textAlign:this.props.textAlign}}>
         <input  
           style={{textAlign:"center"}}
           placeholder="enter a string"
