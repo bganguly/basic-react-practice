@@ -6,7 +6,7 @@ class ReverseUserString extends React.Component {
     super(props)
     this.state = {
       inputString: '',
-      reveresedString: ''
+      reversedString: ''
     }
     // change handler needs to be bound in constructor
     this.handleChange = this.handleChange.bind(this);
@@ -17,7 +17,7 @@ class ReverseUserString extends React.Component {
       inputString: e.target.value,
       // one may not use this.state.inputString to derive the below as the state 
       // retains an erroneous older one char
-      reveresedString: e.target.value.split('').reverse().join('') 
+      reversedString: e.target.value.split('').reverse().join('') 
     });
   }
 
@@ -32,7 +32,7 @@ class ReverseUserString extends React.Component {
           onChange={this.handleChange}
           value={this.state.inputString}
         />
-        <div>Reversed String : {this.state.reveresedString}</div>
+        <div>Reversed String : {this.state.reversedString}</div>
       </div>
     )
   }
