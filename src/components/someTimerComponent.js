@@ -1,5 +1,8 @@
 import React from "react";
 
+// experimental code that shows anti-patterns
+// while it seemingly works- it is not recommended since it does not use
+// recommended lifecycle apis and does not manage memory leakages efficiently
 class SomeTimerComponent extends React.Component {
   constructor (props) {
     super(props)
