@@ -1,73 +1,52 @@
-import React from "react";
+import React , { useState } from "react";
 
-const TodoListUsingHooks = () => {
-
+const TodoListUsingHooks = (props) => {
+  return <ul>
+    {props.items.map(item => (
+      <li key={item.id}>{item.text}</li>
+    ))}
+  </ul>
 }
 
 const TodoAppUsingHooks = () => {
 
-}
+  let [items, setItems] = useState([]);
+  let [text, setText] = useState('');
 
-class TodoList extends React.Component {
-  render() {
-    return (
-      <ul>
-        {this.props.items.map(item => (
-          <li key={item.id}>{item.text}</li>
-        ))}
-      </ul>
-    );
-  }
-}
-
-class TodoApp extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { items: [], text: '' };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+  let handleChange = (e) => {
+    setText( e.target.value );
   }
 
-  render() {
-    return (
-      <div>
-        <h3>TODO</h3>
-        <TodoList items={this.state.items} />
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="new-todo">
-            What needs to be done?
-          </label>
-          <input
-            id="new-todo"
-            onChange={this.handleChange}
-            value={this.state.text}
-          />
-          <button>
-            Add #{this.state.items.length + 1}
-          </button>
-        </form>
-      </div>
-    );
-  }
-
-  handleChange(e) {
-    this.setState({ text: e.target.value });
-  }
-
-  handleSubmit(e) {
+  let handleSubmit = (e) => {
     e.preventDefault();
-    if (this.state.text.length === 0) {
+    if (text.length === 0) {
       return;
     }
     const newItem = {
-      text: this.state.text,
-      id: Date.now()
+      "text": text,
+      "id": Date.now()
     };
-    this.setState(state => ({
-      items: state.items.concat(newItem),
-      text: ''
-    }));
+    setItems(items.concat(newItem))
+    setText('')
   }
+  
+  return <div>
+    <h3>TODO</h3>
+    <TodoListUsingHooks items={items} />
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="new-todo">
+        What needs to be done?
+      </label>
+      <input
+        id="new-todo"
+        onChange={handleChange}
+        value={text}
+      />
+      <button>
+        Add #{items.length + 1}
+      </button>
+    </form>
+  </div>
 }
 
 export default TodoAppUsingHooks;

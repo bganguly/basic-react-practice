@@ -6,7 +6,7 @@ import SomeTimerComponent from './components/someTimerComponent';
 import TodoApp from './components/todoApp';
 import ReverseUserString from './components/reverseUserString';
 import HelloMessageUsingHooks from './componentsUsingHooks/helloMessageUsingHooks';
-// import ReverseUserStringUsingHooks from './componentsUsingHooks/reverseUserStringUsingHooks';
+import ReverseUserStringUsingHooks from './componentsUsingHooks/reverseUserStringUsingHooks';
 import TimmerUsingHooks from './componentsUsingHooks/timerUsingHooks';
 import TodoAppUsingHooks from './componentsUsingHooks/todoAppUsingHooks';
 
@@ -22,8 +22,8 @@ ReactDOM.render(
   // <ReverseUserString textAlign='center'/>,
   // <HelloMessageUsingHooks name="World"/>,
   // <ReverseUserStringUsingHooks textAlign='center'/>,
-  <TimmerUsingHooks/>,
+  // <TimmerUsingHooks/>,
   // TODO: this component is still being completed
-  // <TodoAppUsingHooks/>,
+  <TodoAppUsingHooks/>,
   document.getElementById('root')
 );
