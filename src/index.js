@@ -23,7 +23,6 @@ ReactDOM.render(
   // <HelloMessageUsingHooks name="World"/>,
   // <ReverseUserStringUsingHooks textAlign='center'/>,
   // <TimmerUsingHooks/>,
-  // TODO: this component is still being completed
   <TodoAppUsingHooks/>,
   document.getElementById('root')
 );
