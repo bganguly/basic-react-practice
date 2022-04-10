@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import HelloMessage from './components/helloMessage';
 import Timer from './components/timer';
@@ -24,5 +23,15 @@ ReactDOM.render(
   // <ReverseUserStringUsingHooks textAlign='center'/>,
   // <TimmerUsingHooks/>,
   <TodoAppUsingHooks/>,
+  // showing component composition below
+  // <>
+  //   <HelloMessageUsingHooks name="World"/>
+  //   <hr/>
+  //   <ReverseUserStringUsingHooks textAlign=''/>
+  //   <hr/>
+  //   <TimmerUsingHooks/>
+  //   <hr/>
+  //   <TodoAppUsingHooks/>
+  // </>,
   document.getElementById('root')
 );

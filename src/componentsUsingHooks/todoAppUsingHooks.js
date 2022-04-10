@@ -1,4 +1,4 @@
-import React , { useState } from "react";
+import { useState } from "react";
 
 const TodoListUsingHooks = (props) => {
   return <ul>
@@ -29,7 +29,7 @@ const TodoAppUsingHooks = () => {
     setItems(items.concat(newItem))
     setText('')
   }
-  
+
   return <div>
     <h3>TODO</h3>
     <TodoListUsingHooks items={items} />

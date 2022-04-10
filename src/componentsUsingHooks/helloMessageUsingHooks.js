@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 
 const HelloMessageUsingHooks = (props) => {
   const [randomWord, setRandomWord] = useState(props.name);
