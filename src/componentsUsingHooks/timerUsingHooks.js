@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const TimmerUsingHooks = () => {
+const TimerUsingHooks = () => {
   // initialise view with default 
   let [timeAsString, setTimeAsString] = useState(new Date().toString());
   let tick = () => {
@@ -25,4 +25,4 @@ const TimmerUsingHooks = () => {
   return <> timeAsString: {timeAsString} </>
 }
 
-export default TimmerUsingHooks;
+export default TimerUsingHooks;

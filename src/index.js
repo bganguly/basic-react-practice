@@ -6,7 +6,7 @@ import TodoApp from './components/todoApp';
 import ReverseUserString from './components/reverseUserString';
 import HelloMessageUsingHooks from './componentsUsingHooks/helloMessageUsingHooks';
 import ReverseUserStringUsingHooks from './componentsUsingHooks/reverseUserStringUsingHooks';
-import TimmerUsingHooks from './componentsUsingHooks/timerUsingHooks';
+import TimerUsingHooks from './componentsUsingHooks/timerUsingHooks';
 import TodoAppUsingHooks from './componentsUsingHooks/todoAppUsingHooks';
 
 import './index.css';
@@ -21,7 +21,7 @@ ReactDOM.render(
   // <ReverseUserString textAlign='center'/>,
   // <HelloMessageUsingHooks name="World"/>,
   // <ReverseUserStringUsingHooks textAlign='center'/>,
-  // <TimmerUsingHooks/>,
+  // <TimerUsingHooks/>,
   <TodoAppUsingHooks/>,
   // showing component composition below
   // <>
@@ -29,7 +29,7 @@ ReactDOM.render(
   //   <hr/>
   //   <ReverseUserStringUsingHooks textAlign=''/>
   //   <hr/>
-  //   <TimmerUsingHooks/>
+  //   <TimerUsingHooks/>
   //   <hr/>
   //   <TodoAppUsingHooks/>
   // </>,
