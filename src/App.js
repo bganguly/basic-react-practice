@@ -8,6 +8,7 @@ import ReverseUserStringUsingHooks from './componentsUsingHooks/reverseUserStrin
 import TimerUsingHooks from './componentsUsingHooks/timerUsingHooks';
 import TodoAppUsingHooks from './componentsUsingHooks/todoAppUsingHooks';
 import CheckBoxUsingHooks from './componentsUsingHooks/checkBoxUsingHooks';
+import GithubApiUsingHooks from './componentsForDataFetch/githubApiUsingHooks';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
     // <ReverseUserStringUsingHooks textAlign='center'/>,
     // <TimerUsingHooks/>,
     // <TodoAppUsingHooks/>,
-    <CheckBoxUsingHooks/>
+    // <CheckBoxUsingHooks/>,
+    <GithubApiUsingHooks/>
     // showing component composition below
     // <>
     //   <HelloMessageUsingHooks name="World"/>
