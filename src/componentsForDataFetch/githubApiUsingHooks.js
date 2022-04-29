@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
+import "./githubApiUsingHooks.css"
 
 const GithubApiUsingHooks = () => {
   // initialise view with default 
   let [data, setData] = useState([]);
   let getData = () => {
     fetch(`https://api.github.com/users`)
-    .then((response) => response.json())
-    .then(setData)
+      .then((response) => response.json())
+      .then(setData)
   }
 
   // useffect is the combination of componentdidmount/willunmount etc
@@ -16,27 +17,26 @@ const GithubApiUsingHooks = () => {
     // used to show that usestate runs after every state change when second
     // param is NOT empty array or is not passed
     // console.log(new Date().toString())
-  },[])
+  }, [])
 
   if (data) {
     return (
-      <ul>
-        {data.map((user) => (
-          <li key={user.id}>
-            <p>{user.login} </p>
-            <p>{user.html_url} </p>
+      <div className="cards">
+        {
+          data.map((user) => (<div className="card">
             {user.avatar_url
-            ? <p>
-                <img src={user.avatar_url} 
-                  alt="not provided" 
-                  width="200"
-                  height="200"/>
-              </p>
-            : null}
-          </li>
-        ))
+              ?
+              <img src={user.avatar_url}
+                alt="not provided"
+                width="200"
+                height="200" />
+
+
+              : null}<h3>{user.login} </h3>
+            <a>{user.html_url} </a> </div>))
         }
-      </ul>
+
+      </div>
     )
   }
 
