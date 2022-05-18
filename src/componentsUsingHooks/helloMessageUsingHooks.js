@@ -2,9 +2,9 @@ import {useState} from 'react';
 
 const HelloMessageUsingHooks = (props) => {
   let [propsName] = useState(props.name);
-  // shows that randomworld never changes if the prop is changed by hand in code
+  // shows that propsName never changes if the prop is changed by hand in code
   // after the first render.
-  // a setter needs to be provided that should change the state
+  // a setter needs to be provided in useState that should change the state, upon an event
   console.log(props.name, propsName);
 
   return <>
