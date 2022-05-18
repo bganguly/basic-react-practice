@@ -12,17 +12,17 @@ import GithubApiUsingHooks from './componentsForDataFetch/githubApiUsingHooks';
 
 function App() {
   return (
-    // <HelloMessage name="World"/>,
+    // <HelloMessage name="bik"/>,
     // <Timer />,
     // <SomeTimerComponent/>,
     // <TodoApp/>,
     // <ReverseUserString textAlign='center'/>,
-    // <HelloMessageUsingHooks name="World"/>,
+    <HelloMessageUsingHooks name="day after"/>
     // <ReverseUserStringUsingHooks textAlign='center'/>,
     // <TimerUsingHooks/>,
     // <TodoAppUsingHooks/>,
     // <CheckBoxUsingHooks/>,
-    <GithubApiUsingHooks/>
+    // <GithubApiUsingHooks/>
     // showing component composition below
     // <>
     //   <HelloMessageUsingHooks name="World"/>

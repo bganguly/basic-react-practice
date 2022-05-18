@@ -4,7 +4,7 @@ const CheckBoxUsingHooks = () => {
   let [checked, setChecked] = useState(false);
 
   let handleChange = () => {
-      setChecked( (checked) => !checked)
+      setChecked( () => !checked)
   }
 
   return <>
